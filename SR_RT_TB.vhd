@@ -120,6 +120,7 @@ CLK <= '1';
 wait for clk_period/2;
 end process; 
 -- concurrent assignments
+nR_test<= not R_test; 
 -- injecting fault (if needed)
 pdr_test_modified <= 
 fault_value & pdr_test(2 downto 0) when fault_position = 4 else
